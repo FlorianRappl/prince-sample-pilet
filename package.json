@@ -1,0 +1,55 @@
+{
+  "name": "prince-sample-pilet",
+  "version": "1.0.0",
+  "description": "A sample pilet for playing Prince of Persia.",
+  "keywords": [
+    "pilet"
+  ],
+  "dependencies": {
+    "phaser": "^2.6.2"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-router": "^5.0.0",
+    "@types/react-router-dom": "^5.0.0",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-router-dom": "^5.0.0",
+    "tslib": "latest",
+    "piral-cli": "latest",
+    "piral-cli-esbuild": "latest",
+    "reactstrap": "^8.0.1",
+    "sample-piral": "latest",
+    "sass": "^1.23.7",
+    "typescript": "latest"
+  },
+  "peerDependencies": {
+    "reactstrap": "*",
+    "history": "*",
+    "react": "*",
+    "react-dom": "*",
+    "react-router": "*",
+    "react-router-dom": "*",
+    "tslib": "*",
+    "sample-piral": "*"
+  },
+  "scripts": {
+    "debug-pilet": "pilet debug",
+    "build-pilet": "pilet build",
+    "upgrade-pilet": "pilet upgrade --force-overwrite yes",
+    "publish-pilet": "pilet publish --fresh --api-key $PILET_API_KEY --url $PILET_API_URL",
+    "start": "pilet debug",
+    "postinstall": "node patch-phaser.js"
+  },
+  "main": "dist/index.js",
+  "source": "src/index.tsx",
+  "files": [
+    "dist"
+  ],
+  "piral": {
+    "comment": "Keep this section to allow running `piral upgrade`.",
+    "name": "sample-piral"
+  }
+}
