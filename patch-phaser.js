@@ -6,6 +6,7 @@ const rules = [
   ["var Phaser = Phaser", "var Phaser = window.Phaser = Phaser"],
   ["var PIXI = PIXI", "var PIXI = window.PIXI = PIXI"],
   ["var p2 = module.exports", "var p2 = window.p2 = module.exports"],
+  ["this.crossOrigin = false;", "this.crossOrigin = 'anonymous';"],
 ];
 
 const newContent = rules.reduce((content, [before, after]) => {
